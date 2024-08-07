@@ -8,7 +8,7 @@ import (
 )
 
 var FxDBModule = fx.Module("database",
-	fx.Provide(NewDBConfig),
+	fx.Provide(NewDBConfig,fx.Private) ,
 	fx.Provide(
 		//NewDBConfig ,
 		Pgxconfig,
